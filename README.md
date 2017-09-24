@@ -8,7 +8,13 @@ Tiny CLI utility that transforms Phillips Hue API lights status responses to CSV
 
 ## Usage
 
-huelog doesn't collect data by itself, it gets feed with data from other sources.
+Flag     | Shortcut | Type   | Description
+---------|----------|--------|-------------
+`header` | `H`      | `bool` | Force column headers to be printed in output
+`output` | `o`      | `file` | Write to FILE rather than stdout
+`force`  | `f`      | `bool` | Skip comparison of input to last line of output file
+
+huelog doesn't collect data by itself, it gets feed with data from other sources:
 
 **Log to stdout with column headers**
 ```sh
