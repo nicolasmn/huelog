@@ -1,0 +1,36 @@
+{
+  "name": "huelog",
+  "version": "0.1.0",
+  "description": "Log Hue lights API responses to CSV",
+  "bin": "./cli.js",
+  "main": "./index.js",
+  "scripts": {
+    "test": "huelog -h",
+    "start": "huelog -h"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/nicolasmn/huelog.git"
+  },
+  "keywords": [
+    "hue",
+    "log",
+    "csv",
+    "json",
+    "cli"
+  ],
+  "bugs": {
+    "url": "https://github.com/nicolasmn/huelog/issues"
+  },
+  "homepage": "https://github.com/nicolasmn/huelog#readme",
+  "author": "Nicolas Müller Noulezas",
+  "license": "ISC",
+  "dependencies": {
+    "cli": "^1.0.1",
+    "csv": "^1.1.1",
+    "deep-equal": "^1.0.1",
+    "flat": "^4.0.0",
+    "moment": "^2.18.1",
+    "read-last-lines": "^1.2.0"
+  }
+}
