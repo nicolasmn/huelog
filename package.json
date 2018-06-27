@@ -8,9 +8,9 @@
     "test": "huelog -h",
     "start": "huelog -h"
   },
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/nicolasmn/huelog.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicolasmn/huelog.git"
   },
   "keywords": [
     "hue",
@@ -27,10 +27,10 @@
   "license": "ISC",
   "dependencies": {
     "cli": "^1.0.1",
-    "csv": "^1.1.1",
+    "csv": "^1.2.1",
     "deep-equal": "^1.0.1",
     "flat": "^4.0.0",
-    "moment": "^2.18.1",
-    "read-last-lines": "^1.2.0"
+    "moment": "^2.22.2",
+    "read-last-lines": "^1.5.0"
   }
 }
