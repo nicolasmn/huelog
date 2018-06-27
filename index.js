@@ -1,4 +1,3 @@
-const path = require('path');
 const stream = require('stream');
 const csv = require('csv');
 const equal = require('deep-equal');
