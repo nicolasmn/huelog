@@ -1,10 +1,10 @@
+const path = require('path');
 const stream = require('stream');
 const csv = require('csv');
 const equal = require('deep-equal');
 const moment = require('moment');
 const tail = require('read-last-lines');
 const { flatten, unflatten } = require('flat');
-
 
 /**
  * Transform a data blob to an array of state objects.
@@ -13,17 +13,13 @@ const { flatten, unflatten } = require('flat');
  * @return {Array}        Array of state objects for each light
  */
 exports.transformData = function (blob) {
-  try {
-    const data = JSON.parse(blob);
-    return Object.values(data).map(dataset => ({
-      on:  dataset.state.on ? 1 : 0,
-      bri: dataset.state.bri,
-      hue: dataset.state.hue,
-      sat: dataset.state.sat
-    }));
-  } catch (e) {
-    cli.fatal('Could not parse blob to JSON', e);
-  }
+  const data = JSON.parse(blob);
+  return Object.values(data).map(dataset => ({
+    on:  dataset.state.on ? 1 : 0,
+    x: dataset.state.xy[0],
+    y: dataset.state.xy[1],
+    bri: dataset.state.bri
+  }));
 }
 
 /**
