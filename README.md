@@ -16,24 +16,26 @@ Flag       | Shortcut | Type   | Description
 
 huelog doesn't collect data by itself, it gets feed with data from other sources:
 
-**Log to stdout with column headers**
+### Log to stdout with column headers
 ```sh
 $ hueadm lights --json | huelog --header
 ```
 
-**Log to file**
+### Log to file
 ```sh
 $ hueadm lights --json | huelog --output ./huelog.csv
 ```
 Data will be appended if the output file exists.
 
-**Note**
+### Note
 
 In the examples above I'm piping in data using [hueadm](https://github.com/bahamas10/hueadm), a CLI to [phillips hue](http://meethue.com/) that allows for easy management of your lights and much more.
 
 You can however use any tool you want to collect the lights data, input just has to be a valid Phillips Hue API response in JSON for the `/lights` endpoint, e.g.:
 
-```json
+<details>
+<summary>Example JSON response</summary>
+<pre>
 {
   "1": {
     "state": {
@@ -74,4 +76,13 @@ You can however use any tool you want to collect the lights data, input just has
     ...
   }
 }
-```
+</pre>
+</details>
+
+## Export
+
+More as a side note to my future self than for actual usage im writing down my hack on how to export this data in the way I actually need it:
+
+`cat <input-file> | npx csvtojson | jq '[ .[] | {month, day, hour, minute} ]' | npx json2csv`
+
+I'm converting the generated CSV data to JSON, filter it to an array wich includes only the month, day and hour columns and convert it back to CSV again. Science.
