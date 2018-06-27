@@ -18,12 +18,12 @@ huelog doesn't collect data by itself, it gets feed with data from other sources
 
 **Log to stdout with column headers**
 ```sh
-$ hueadm --json lights | huelog --header
+$ hueadm lights --json | huelog --header
 ```
 
 **Log to file**
 ```sh
-$ hueadm --json lights | huelog --output ./huelog.csv
+$ hueadm lights --json | huelog --output ./huelog.csv
 ```
 Data will be appended if the output file exists.
 
