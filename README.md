@@ -1,6 +1,8 @@
 # huelog
 
-Tiny CLI utility that transforms Phillips Hue API lights status responses to CSV.
+Tiny CLI utility that transforms Phillips Hue API lights status responses to CSV logs, keeping only state information.
+
+See [`test/example-transformed.csv`](./test/example-transformed.csv) for an example output.
 
 ## Setup
 
@@ -79,11 +81,3 @@ You can however use any tool you want to collect the lights data, input just has
 }
 </pre>
 </details>
-
-## Export
-
-More as a side note to my future self than for actual usage im writing down my hack on how to export this data in the way I actually need it:
-
-`cat <input-file> | npx csvtojson | jq '[ .[] | {month, day, hour, minute} ]' | npx json2csv`
-
-I'm converting the generated CSV data to JSON, filter it to an array wich includes only the month, day and hour columns and convert it back to CSV again. Science.

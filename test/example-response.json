@@ -1,0 +1,266 @@
+{
+  "2": {
+    "state": {
+      "on": true,
+      "bri": 254,
+      "hue": 5353,
+      "sat": 106,
+      "effect": "none",
+      "xy": [
+        0.4647,
+        0.3824
+      ],
+      "ct": 375,
+      "alert": "none",
+      "colormode": "xy",
+      "mode": "homeautomation",
+      "reachable": true
+    },
+    "swupdate": {
+      "state": "noupdates",
+      "lastinstall": "0000-00-00T00:00:00"
+    },
+    "type": "Extended color light",
+    "name": "Light 1",
+    "modelid": "LCT010",
+    "manufacturername": "Philips",
+    "productname": "Hue color lamp",
+    "capabilities": {
+      "certified": true,
+      "control": {
+        "mindimlevel": 1000,
+        "maxlumen": 806,
+        "colorgamuttype": "C",
+        "colorgamut": [
+          [
+            0.6915,
+            0.3083
+          ],
+          [
+            0.17,
+            0.7
+          ],
+          [
+            0.1532,
+            0.0475
+          ]
+        ],
+        "ct": {
+          "min": 153,
+          "max": 500
+        }
+      },
+      "streaming": {
+        "renderer": true,
+        "proxy": true
+      }
+    },
+    "config": {
+      "archetype": "sultanbulb",
+      "function": "mixed",
+      "direction": "omnidirectional"
+    },
+    "uniqueid": "00:00:00:00:00:00:00:00-10",
+    "swversion": "0.00.0_r00000",
+    "swconfigid": "00000000",
+    "productid": "Philips-LCT010-0-00000000"
+  },
+  "3": {
+    "state": {
+      "on": true,
+      "bri": 102,
+      "hue": 5800,
+      "sat": 205,
+      "effect": "none",
+      "xy": [
+        0.5361,
+        0.3931
+      ],
+      "ct": 500,
+      "alert": "none",
+      "colormode": "xy",
+      "mode": "homeautomation",
+      "reachable": true
+    },
+    "swupdate": {
+      "state": "noupdates",
+      "lastinstall": "0000-00-00T00:00:00"
+    },
+    "type": "Extended color light",
+    "name": "Light 2",
+    "modelid": "LCT010",
+    "manufacturername": "Philips",
+    "productname": "Hue color lamp",
+    "capabilities": {
+      "certified": true,
+      "control": {
+        "mindimlevel": 1000,
+        "maxlumen": 806,
+        "colorgamuttype": "C",
+        "colorgamut": [
+          [
+            0.6915,
+            0.3083
+          ],
+          [
+            0.17,
+            0.7
+          ],
+          [
+            0.1532,
+            0.0475
+          ]
+        ],
+        "ct": {
+          "min": 153,
+          "max": 500
+        }
+      },
+      "streaming": {
+        "renderer": true,
+        "proxy": true
+      }
+    },
+    "config": {
+      "archetype": "sultanbulb",
+      "function": "mixed",
+      "direction": "omnidirectional"
+    },
+    "uniqueid": "00:00:00:00:00:00:00:00-20",
+    "swversion": "0.00.0_r00000",
+    "swconfigid": "00000000",
+    "productid": "Philips-LCT010-0-00000000"
+  },
+  "4": {
+    "state": {
+      "on": false,
+      "bri": 1,
+      "hue": 8402,
+      "sat": 140,
+      "effect": "none",
+      "xy": [
+        0.4575,
+        0.4099
+      ],
+      "ct": 366,
+      "alert": "none",
+      "colormode": "xy",
+      "mode": "homeautomation",
+      "reachable": true
+    },
+    "swupdate": {
+      "state": "noupdates",
+      "lastinstall": "0000-00-00T00:00:00"
+    },
+    "type": "Extended color light",
+    "name": "Light 3",
+    "modelid": "LCT012",
+    "manufacturername": "Philips",
+    "productname": "Hue color candle",
+    "capabilities": {
+      "certified": true,
+      "control": {
+        "mindimlevel": 2000,
+        "maxlumen": 450,
+        "colorgamuttype": "C",
+        "colorgamut": [
+          [
+            0.6915,
+            0.3083
+          ],
+          [
+            0.17,
+            0.7
+          ],
+          [
+            0.1532,
+            0.0475
+          ]
+        ],
+        "ct": {
+          "min": 153,
+          "max": 500
+        }
+      },
+      "streaming": {
+        "renderer": true,
+        "proxy": true
+      }
+    },
+    "config": {
+      "archetype": "candlebulb",
+      "function": "mixed",
+      "direction": "omnidirectional"
+    },
+    "uniqueid": "00:00:00:00:00:00:00:00-30",
+    "swversion": "0.00.0_r00000",
+    "swconfigid": "00000000",
+    "productid": "Philips-LCT010-0-00000000"
+  },
+  "5": {
+    "state": {
+      "on": false,
+      "bri": 1,
+      "hue": 8402,
+      "sat": 140,
+      "effect": "none",
+      "xy": [
+        0.4575,
+        0.4099
+      ],
+      "ct": 366,
+      "alert": "none",
+      "colormode": "xy",
+      "mode": "homeautomation",
+      "reachable": true
+    },
+    "swupdate": {
+      "state": "noupdates",
+      "lastinstall": "0000-00-00T00:00:00"
+    },
+    "type": "Extended color light",
+    "name": "Light 4",
+    "modelid": "LCT015",
+    "manufacturername": "Philips",
+    "productname": "Hue color lamp",
+    "capabilities": {
+      "certified": true,
+      "control": {
+        "mindimlevel": 1000,
+        "maxlumen": 806,
+        "colorgamuttype": "C",
+        "colorgamut": [
+          [
+            0.6915,
+            0.3083
+          ],
+          [
+            0.17,
+            0.7
+          ],
+          [
+            0.1532,
+            0.0475
+          ]
+        ],
+        "ct": {
+          "min": 153,
+          "max": 500
+        }
+      },
+      "streaming": {
+        "renderer": true,
+        "proxy": true
+      }
+    },
+    "config": {
+      "archetype": "sultanbulb",
+      "function": "mixed",
+      "direction": "omnidirectional"
+    },
+    "uniqueid": "00:00:00:00:00:00:00:00-40",
+    "swversion": "0.00.0_r00000",
+    "swconfigid": "00000000",
+    "productid": "Philips-LCT010-0-00000000"
+  }
+}

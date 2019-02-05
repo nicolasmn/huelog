@@ -5,7 +5,7 @@
   "bin": "./cli.js",
   "main": "./index.js",
   "scripts": {
-    "test": "huelog -h",
+    "test": "cat test/example-response.json | huelog -H -t 1549401518555 | diff -qs ./test/example-transformed.csv -",
     "start": "huelog -h"
   },
   "repository": {
