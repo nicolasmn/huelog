@@ -1,7 +1,6 @@
 const stream = require('stream');
 const csv = require('csv');
 const equal = require('deep-equal');
-const moment = require('moment');
 const tail = require('read-last-lines');
 const { flatten, unflatten } = require('flat');
 
@@ -12,30 +11,27 @@ const { flatten, unflatten } = require('flat');
  * @return {Array}        Array of state objects for each light
  */
 exports.transformData = function (blob) {
-  const data = JSON.parse(blob);
-  return Object.values(data).map(dataset => ({
-    on:  dataset.state.on ? 1 : 0,
-    x: dataset.state.xy[0],
-    y: dataset.state.xy[1],
-    bri: dataset.state.bri
-  }));
+  const json = JSON.parse(blob);
+  return Object.values(json).map(dataset => ({
+    name: dataset.name,
+    uniqueid: dataset.uniqueid,
+    ...dataset.state
+  }))
 }
 
 /**
  * Compose with datetime
  *
- * @param  {String} blob  RAW log data (should be parsable as JSON)
- * @param  {String} date  Parsable datetime string or undefined for current date
- * @return {Object}       Composed data
+ * @param  {String}  blob   RAW log data (should be parsable as JSON)
+ * @param  {Date}   [date]  Date object or undefined for current date
+ * @return {Object}         Composed and flattened data
+ * 
  */
 exports.composeData = function (blob, date) {
-  const now = moment(date);
+  const stamp = date ? date.valueOf() : Date.now();
   const data = exports.transformData(blob);
   return obj = flatten({
-    month:  now.month(),
-    day:    now.day(),
-    hour:   now.hour(),
-    minute: now.minute(),
+    timestamp: stamp,
     lights: data
   });
 }

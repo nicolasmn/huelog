@@ -30,7 +30,6 @@
     "csv": "^1.2.1",
     "deep-equal": "^1.0.1",
     "flat": "^4.0.0",
-    "moment": "^2.22.2",
     "read-last-lines": "^1.5.0"
   }
 }
