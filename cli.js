@@ -13,16 +13,16 @@ const flags = cli.parse({
 });
 
 
-cli.withStdin('utf-8', function (input) {
+cli.withStdin('utf-8', function(input) {
 
   // AUTOCONFIG
 
   let wstream = process.stdout
 
   if (flags.output) {
-    const file_exists = cli.native.fs.existsSync(flags.output);
+    const fileExists = cli.native.fs.existsSync(flags.output);
 
-    if (file_exists) {
+    if (fileExists) {
       // Compare generated output to last line of the output file if huelog
       // was called without a `compare` flag and the file already exists
       if (flags.force === null) {
@@ -38,7 +38,7 @@ cli.withStdin('utf-8', function (input) {
     // Set write stream to output file and set flags for appending to an
     // already existing file or creating a new one
     wstream = cli.native.fs.createWriteStream(flags.output, {
-      flags: file_exists ? 'a' : 'w'
+      flags: fileExists ? 'a' : 'w'
     });
   }
 
