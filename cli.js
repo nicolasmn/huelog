@@ -8,7 +8,8 @@ cli.enable('status', 'catchall');
 const flags = cli.parse({
   header: [ 'H', 'Force column headers to be printed in output', 'bool' ],
   output: [ 'o', 'Write to FILE rather than stdout', 'file' ],
-  force:  [ 'f', 'Skip comparison of input to last line of output file', 'bool' ]
+  force:  [ 'f', 'Skip comparison of input to last line of output file', 'bool' ],
+  time:   [ 't', 'Pass a time to be logged instead of current time', 'date' ],
 });
 
 
@@ -43,8 +44,8 @@ cli.withStdin('utf-8', function (input) {
 
   // WRITE
 
-  const dataout = huelog.composeData(input);
-
+  const dataout = huelog.composeData(input, flags.time);
+  
   huelog.statusDidChange(dataout, flags.force ? flags.output : false)
     .then(change => (change)
       ? huelog.writeData(dataout, wstream, flags.header)

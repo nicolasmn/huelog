@@ -13,6 +13,7 @@ Flag       | Shortcut | Type   | Description
 `--header` | `-H`     | `bool` | Force column headers to be printed in output
 `--output` | `-o`     | `file` | Write to FILE rather than stdout
 `--force`  | `-f`     | `bool` | Skip comparison of input to last line of output file
+`--time`   | `-t`     | `date` | Pass a time to be logged instead of current time
 
 huelog doesn't collect data by itself, it gets feed with data from other sources:
 
