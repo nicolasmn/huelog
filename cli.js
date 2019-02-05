@@ -18,17 +18,12 @@ cli.withStdin('utf-8', function(input) {
   // AUTOCONFIG
 
   let wstream = process.stdout
+  let fileExists = false
 
   if (flags.output) {
-    const fileExists = cli.native.fs.existsSync(flags.output);
+    fileExists = cli.native.fs.existsSync(flags.output);
 
-    if (fileExists) {
-      // Compare generated output to last line of the output file if huelog
-      // was called without a `compare` flag and the file already exists
-      if (flags.force === null) {
-        flags.force = true;
-      }
-    } else {
+    if (!fileExists) {
       // Print CSV header if huelog was called without a `header` flag
       // and the output file does not exist yet
       if (flags.header === null) {
@@ -45,8 +40,8 @@ cli.withStdin('utf-8', function(input) {
   // WRITE
 
   const dataout = huelog.composeData(input, flags.time);
-  
-  huelog.statusDidChange(dataout, flags.output).then(change => {
+
+  huelog.statusDidChange(dataout, fileExists ? flags.output : false).then(change => {
     if (!change && flags.skip) {
       cli.info('Data did not change, skip logging.');
     } else {
